@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+  --font: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Light-grayish-blue-1);
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+p {
+  color: var(--grayish-blue);
+}
+
+span {
+  color: var(--Very-dark-blue);
+}
+
+.notification-container {
+  display: flex;
+  flex-direction: column;
+  width: 850px;
+  background-color: var(--Very-light-grayish-blue);
+  margin: 4rem;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.container {
+  display: flex;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container h2 {
+  padding-right: 25rem;
+  font-size: 30px;
+}
+
+.container span {
+  width: 45px;
+  height: 34px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--Blue);
+  color: var(--White);
+  display: inline-block;
+}
+
+.jacob-comment .highlight,
+.anna-comment .highlight {
+  color: var(--Blue);
+  font-weight: 800;
+}
+
+.container p {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.comment.active {
+  background-color: var(--Very-light-grayish-blue) !important;
+}
+
+.comment.active .ball {
+  display: none;
+}
+
+.comments-container {
+  margin-top: 1rem;
+}
+
+img {
+  width: auto;
+  height: 50px;
+}
+
+.mark-comment.comment,
+.angela-comment.comment,
+.jacob-comment.comment {
+  background-color: var(--Light-grayish-blue-1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.comment-content {
+  position: relative;
+}
+
+.img {
+  padding-right: 1rem;
+}
+
+.days {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grayish-blue);
+}
+
+.comment span {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding-left: 0.1rem;
+}
+
+.highlight {
+  color: var(--grayish-blue);
+  cursor: pointer;
+}
+
+.ball {
+  position: inherit;
+  top: -1rem;
+  display: flex;
+  width: 13px;
+  height: 10px;
+  right: -1rem;
+  background-color: var(--Red);
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.ricky-comment,
+.kimberly-comment,
+.nathan-comment,
+.anna-comment {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.ricky-comment .days {
+  padding: 0.5rem;
+}
+
+.ricky-comment img {
+  position: relative;
+  top: -30px;
+}
+
+.message {
+  border: 1px solid var(--grayish-blue);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  width: 95%;
+  color: var(--Dark-grayish-blue);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.kimberly-comment {
+  position: relative;
+}
+
+.kimberly-comment .comment-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-2 {
+  position: absolute;
+  right: 1.5rem;
+}
+
+.notification-container p:not(:has(span)) {
+  color: var(--grayish-blue);
+}
+
+.kimberly-comment .days,
+.nathan-comment .days,
+.anna-comment .days {
+  margin-top: 0.3rem;
+}
+
+.nathan-comment .highlight {
+  color: var(--Dark-grayish-blue);
+  font-weight: 800;
+}
+
+.comment {
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 700px) {
+    .notification-container {
+      margin: 2rem;
+    }
+  
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 0;
+      margin-bottom: 0.5rem;
+    }
+  
+    .container h2 {
+      padding-right: 0;
+      font-size: 24px;
+    }
+  
+    .container span {
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  
+    .container p {
+      font-size: 16px;
+    }
+  
+    .mark-comment.comment,
+    .angela-comment.comment,
+    .jacob-comment.comment,
+    .ricky-comment,
+    .kimberly-comment,
+    .nathan-comment,
+    .anna-comment {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+    }
+  
+    .ricky-comment img {
+      top: initial;
+      bottom: 0;
+    }
+  
+    .message {
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 16px;
+    }
+  
+    .kimberly-comment .comment-content {
+      align-items: flex-start;
+    }
+  
+    .img-2 {
+      position: initial;
+      margin-top: 0.5rem;
+    }
+  }
+  
